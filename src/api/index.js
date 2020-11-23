@@ -1,7 +1,5 @@
 import axios from 'axios';
-import {
-    router
-} from '../router';
+import router from '../router';
 import {
     Message
 } from 'view-design';
@@ -16,7 +14,7 @@ localStorage.setItem('baseURL', baseURL)
 const $axios = axios.create({
     // 设置超时时间
     timeout: 60000,
-    baseURL: 'http://prepaas.ruhrtec.cn'
+    baseURL: 'http://paas.ruhrtec.cn'
 });
 /**
  * 请求前拦截
