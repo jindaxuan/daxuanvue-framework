@@ -316,6 +316,7 @@ const UUID = function () {
 }
 
 // 判断安卓或者ios终端
+// eslint-disable-next-line no-unused-vars
 const testMobileType = function() {
     const u = navigator.userAgent
     const isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1 // android终端

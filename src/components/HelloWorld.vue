@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-11 08:36:32
- * @LastEditTime: 2020-11-23 17:59:48
+ * @LastEditTime: 2020-11-24 08:10:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /anhuiprovince/src/components/HelloWorld.vue
@@ -31,15 +31,17 @@ export default {
         msg: String,
     },
     methods: {
-        logining() {
+        async logining() {
             let json = {
                 username: this.value1,
                 password: this.value2,
                 tenant: 'paas',
             }
-            Login(json).then((res) => {
-                console.log('res', res)
-            })
+			const {data:res} = await Login(json)
+			console.log('res',res);
+			console.log('♨',res.token);
+			
+			
         },
     },
 }

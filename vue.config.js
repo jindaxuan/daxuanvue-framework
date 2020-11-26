@@ -136,7 +136,7 @@ module.exports = {
         port: 8899, //设置端口号
         proxy: {
             '^/web/': {
-                target: '', // 开发3
+                target: 'http://paas.ruhrtec.cn', // 开发3
                 ws: false,
                 pathRewrite: {
                     '^/web': ''
